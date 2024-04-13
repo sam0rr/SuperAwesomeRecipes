@@ -144,23 +144,17 @@ header img {
   display: block;
 }
 
-button {
-  padding: 10px 20px;
-  margin-left: 10px;
-  /* Espacement entre le champ de saisie et le bouton */
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 16px;
+.search-section button {
+  margin-left: 1rem;
 }
 
 .suggestions-box div {
   display: flex;
   background-color: var(--color-bg);
   justify-content: space-between;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15) !important;
   border-top: none;
   overflow: hidden;
@@ -212,9 +206,9 @@ button {
 }
 
 .star-icon {
-  margin-right: 4px;
+  margin-right: 2px;
   /* Adjust as needed */
-  font-size: 16px !important;
+  font-size: 12px !important;
   color: #96c13d;
 }
 
