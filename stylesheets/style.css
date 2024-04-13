@@ -1,0 +1,434 @@
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+  width: 100%;
+
+}
+
+body {
+  width: 100%;
+  max-width: 1800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: var(--color-bg) !important;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+header {
+  height: 80px;
+}
+
+.navbar {
+  height: 100%;
+  width: auto;
+  background-color: #e0e0e0;
+}
+
+.navbar h2 {
+  color: #96c13d;
+}
+
+.navbar h2:hover {
+  color: #68862b;
+}
+
+header img {
+  height: 48px;
+  width: auto;
+}
+
+.navbar ul {
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.container-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-block: 2rem;
+  align-items: center;
+  background-color: #e0e0e0 !important;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden;
+  border-radius: 12px !important;
+}
+
+@media (max-width: 767px) {
+
+  .container-body {
+    margin-block: 0rem;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+}
+
+#search-container {
+  position: relative;
+  flex-grow: 1;
+  /* Permet au container de s'étendre tout en laissant de la place pour le bouton */
+}
+
+#search-input::placeholder {
+  color: #000 !important;
+  /* Définit la couleur du placeholder en noir */
+  opacity: 1;
+  /* Assure que la couleur est bien saturée et visible */
+}
+
+/* Réinitialisation des styles pour la section de recherche */
+#search-container input,
+#search-container button,
+#suggestions-box {
+  all: unset;
+  /* Réinitialise tous les styles par défaut */
+  box-sizing: border-box;
+  color: #000;
+}
+
+/* Styles de base pour l'input et le bouton */
+#search-container input,
+#search-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+#search-container input {
+  border: 2px solid #96c13d;
+  border-radius: 12px;
+}
+
+/* Styles pour l'input lorsqu'il est focus */
+#search-container input:focus {
+  border-color: #68862b;
+  outline: none;
+  /* Supprime l'outline par défaut pour le focus */
+}
+
+/* Styles pour la boîte de suggestions */
+#suggestions-box {
+  display: none;
+  /* Cache par défaut la boîte de suggestions */
+  width: 100%;
+  background-color: transparent;
+  border-radius: 12px;
+  z-index: 1000;
+  /* Assure que la boîte de suggestions est au-dessus des autres éléments */
+  position: absolute;
+  /* Positionne relativement au conteneur */
+}
+
+/* Styles lorsque la boîte de suggestions est visible */
+#suggestions-box.visible {
+  display: block;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  /* Espacement entre le champ de saisie et le bouton */
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.suggestions-box div {
+  display: flex;
+  background-color: var(--color-bg);
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid #e0e0e0;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15) !important;
+  border-top: none;
+  overflow: hidden;
+}
+
+.suggestions-box div:first-child {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.suggestions-box div:last-child {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+
+.suggestions-box div:hover {
+  background-color: #e0e0e0;
+}
+
+#suggestions-box div span {
+  margin: 0 5px;
+}
+
+.suggestions-box div:last-child {
+  border-bottom: none;
+}
+
+#card-container .card-settings {
+  overflow: hidden;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 12px !important;
+  border: none;
+}
+
+.card-settings:hover {
+  transform: translateY(-10px);
+}
+
+.card-settings {
+  transition: all 0.5s ease;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.star-icon {
+  margin-right: 4px;
+  /* Adjust as needed */
+  font-size: 16px !important;
+  color: #96c13d;
+}
+
+.star-icon:last-child {
+  margin-right: 0;
+  /* No margin for the last star */
+}
+
+.button-align {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: 0;
+}
+
+/* stylesheets/style.css */
+
+.container-body {
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  padding-left: 20px;
+}
+
+/* Spacing and styling for details */
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+}
+
+#recipe-title {
+  margin-bottom: 1rem;
+}
+
+p strong {
+  margin-right: 5px;
+}
+
+p span {
+  font-weight: normal;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+.list-unstyled {
+  padding-left: 0;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+::placeholder {
+  font-style: var(--ff-body);
+}
+
+.form-control::placeholder {
+  font-style: var(--ff-body);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #68862b !important;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15) !important;
+  color: #000;
+}
+
+.btn-primary {
+  width: fit-content !important;
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 12px;
+  transition: background-color 0.3s, border-color 0.3s;
+  background-color: #96c13d !important;
+  border: none;
+  overflow: hidden;
+  overflow: hidden;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15) !important;
+  color: #000000 !important;
+}
+
+#popular.container.mt-5 {
+  padding-inline: 0 !important;
+}
+
+.favorite-section {
+  width: 100%;
+  padding: 0%;
+}
+
+.favorite-section {
+  border: none !important;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15) !important;
+  text-decoration: none;
+  padding: 1rem;
+  background-color: var(--color-bg);
+
+}
+
+.favorite-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.favorite-item {
+  padding: 0;
+  /* Padding pour chaque élément */
+  border-radius: 5px;
+  /* Coins arrondis pour chaque élément */
+  transition: background-color 0.3s;
+  /* Transition pour l'interaction au survol */
+}
+
+.favorite-item span {
+  flex-grow: 1;
+  /* Permet au texte de prendre la place nécessaire */
+}
+
+.list-group-item-action {
+  text-decoration: none !important;
+}
+
+.favorite-section .list-group .btn {
+  margin-left: 1rem;
+}
+
+footer {
+  background-color: var(--color-bg);
+}
+
+footer .rsLink {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1.4rem;
+}
+
+footer .rsLink i {
+  font-size: 20px;
+  color: #96c13d;
+}
+
+footer .rsLink i:hover {
+  color: #68862b;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.detail-container .image-side {
+  width: 60%;
+}
+
+.detail-container .image-side img {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15) !important;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+}
+
+.detail-container .text-side {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.text-side ol,
+.text-side ul,
+.text-side li {
+  margin-bottom: 0;
+}
+
+.text-side li {
+  font-size: 15px !important;
+  font-weight: 400;
+}
+
+.text-side h1 {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+
+  .detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-container .image-side {
+    width: 100%;
+  }
+
+  .detail-container .text-side {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+}

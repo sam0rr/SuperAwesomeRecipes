@@ -1,0 +1,186 @@
+.row {
+    --gutter-x: 0;
+    --gutter-y: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row>* {
+    margin-block: var(--gutter-y);
+    padding-inline: var(--gutter-x);
+}
+
+.col {
+    flex: 1 0 0%;
+    width: 100%;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    flex: 0 0 auto;
+}
+
+.col-1 {
+    width: 8.33333333%;
+}
+
+.col-2 {
+    width: 16.66666667%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33333333%;
+}
+
+.col-5 {
+    width: 41.66666667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33333333%;
+}
+
+.col-8 {
+    width: 66.66666667%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33333333%;
+}
+
+.col-11 {
+    width: 91.66666667%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.offset-1 {
+    margin-left: 8.33333333%;
+}
+
+.offset-2 {
+    margin-left: 16.66666667%;
+}
+
+.offset-3 {
+    margin-left: 25%;
+}
+
+.offset-4 {
+    margin-left: 33.33333333%;
+}
+
+.offset-5 {
+    margin-left: 41.66666667%;
+}
+
+.offset-6 {
+    margin-left: 50%;
+}
+
+.offset-7 {
+    margin-left: 58.33333333%;
+}
+
+.offset-8 {
+    margin-left: 66.66666667%;
+}
+
+.offset-9 {
+    margin-left: 75%;
+}
+
+.offset-10 {
+    margin-left: 83.33333333%;
+}
+
+.offset-11 {
+    margin-left: 91.66666667%;
+}
+
+/* gutter spacer utilities */
+.g-0,
+.gx-0 {
+    --gutter-x: 0;
+}
+
+.g-0,
+.gy-0 {
+    --gutter-y: 0;
+}
+
+.g-1,
+.gx-1 {
+    --gutter-x: 0.25rem;
+}
+
+.g-1,
+.gy-1 {
+    --gutter-y: 0.25rem;
+}
+
+.g-2,
+.gx-2 {
+    --gutter-x: 0.5rem;
+}
+
+.g-2,
+.gy-2 {
+    --gutter-y: 0.5rem;
+}
+
+.g-3,
+.gx-3 {
+    --gutter-x: 1rem;
+}
+
+.g-3,
+.gy-3 {
+    --gutter-y: 1rem;
+}
+
+.g-4,
+.gx-4 {
+    --gutter-x: 1.5rem;
+}
+
+.g-4,
+.gy-4 {
+    --gutter-y: 1.5rem;
+}
+
+.g-5,
+.gx-5 {
+    --gutter-x: 3rem;
+}
+
+.g-5,
+.gy-5 {
+    --gutter-y: 3rem;
+}
