@@ -160,7 +160,7 @@ button {
   justify-content: space-between;
   padding: 10px;
   cursor: pointer;
-  border: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15) !important;
   border-top: none;
   overflow: hidden;
