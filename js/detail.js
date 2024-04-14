@@ -35,7 +35,11 @@ function updateRecipeDetails(recipe) {
   document.getElementById('cuisine').innerHTML += recipe.cuisine || 'Unknown';
   document.getElementById('calories').innerHTML += recipe.caloriesPerServing + ' calories' || 'Unknown';
   document.getElementById('meal-type').innerHTML += recipe.mealType || 'Unknown';
-  document.getElementById('rating').innerHTML += recipe.rating + '/5' || 'Unknown';
+  if (recipe.rating && recipe.reviewCount) {
+    document.getElementById('rating').innerHTML += `${recipe.rating}/5  (${recipe.reviewCount} reviews)`;
+  } else {
+    document.getElementById('rating').innerHTML = 'Unknown';
+  }
 
   const ingredientsList = document.getElementById('ingredients');
   recipe.ingredients.forEach(ingredient => {
