@@ -13,7 +13,7 @@ function drawCard(recipe, index) {
           <div class="card-body">
               <h5 class="card-title">${recipe.name}</h5>
               <p class="card-text"><strong>Cuisine:</strong> ${recipe.cuisine}</p>
-              <p class="card-text"><strong>Rating:</strong> ${recipe.rating}/5</p>
+              <p class="card-text"><strong>Rating:</strong> ${recipe.rating}/5  (${recipe.reviewCount} reviews)</p>
               <p class="card-text"><strong>Prep Time:</strong> ${prepTimeIcon}</p>
               <p class="card-text" style="color:${difficultyColor};"><strong>Difficulty:</strong> ${recipe.difficulty}</p>
               <div class="button-align">
